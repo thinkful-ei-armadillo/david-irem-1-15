@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+'use strict';
+
 /* What is scope?
 Scope is like where variables can be accessed.
 In global it could be anywhere in the file. In local scope, variable is only within the function block. 
@@ -11,3 +14,38 @@ If you declare with var instead of let or const, it throws an error.
 side effects?
 When a function reaches out of its local scope and changes something in global scope.
 In that case, a function will give us inconsistent results every time we run it. Pure functions has no side effects. */
+
+function max(numbers){
+  if(numbers.length === 0){
+    return null;
+  } else {
+    let i = 0;
+    let currentMax = numbers[0];
+    while(i < numbers.length){
+      if(numbers[i] > currentMax){
+        currentMax = numbers[i];
+      }
+      i++;
+    }
+    return currentMax;
+  }
+}
+
+let myArr = [0,2,4,1];
+max(myArr);
+
+function min(numbers){
+  if(numbers.length === 0){
+    return null;
+  } else {
+    let i = 0;
+    let currentMin = numbers[0];
+    while(i < numbers.length){
+      if(numbers[i] < currentMin){
+        currentMin = numbers[i];
+      }
+      i++;
+    }
+    return currentMin;
+  }
+}
