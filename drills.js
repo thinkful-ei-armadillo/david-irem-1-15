@@ -117,9 +117,26 @@ function hazardWarningCreator(typeOfWarning){
 // rain('mainstreet');
 
 
-const turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
-const forwardMovement = turtleMovements.filter(arr => arr[0] >= 0 && arr[1] >= 0);
-const mappedMovements = turtleMovements.map(arr => Math.abs(arr[0]) + Math.abs(arr[1]));
-turtleMovements.forEach(arr => console.log(Math.abs(arr[0]) + Math.abs(arr[1])));
-console.log(forwardMovement);
-console.log(mappedMovements);
+// const turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+// const forwardMovement = turtleMovements.filter(arr => arr[0] >= 0 && arr[1] >= 0);
+// const mappedMovements = turtleMovements.map(arr => Math.abs(arr[0]) + Math.abs(arr[1]));
+// turtleMovements.forEach(arr => console.log(Math.abs(arr[0]) + Math.abs(arr[1])));
+// console.log(forwardMovement);
+// console.log(mappedMovements);
+
+function decoder(string) {
+  const arr = string.split(' ');
+  let output=' ';
+  arr.reduce(function(output,item){
+    if(item.length === 3){
+      output += ' ';
+    }
+    else {
+      output += item[item.length-1].toUpperCase;
+    }
+  });
+  console.log(output);
+  return output;
+}
+
+decoder('noggin oreo');
