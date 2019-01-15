@@ -51,11 +51,9 @@ function min(numbers){
 }
 
 function average(numbers){
-  let i =0;
   let sum = 0;
-  while (i < numbers.length){
-    sum += numbers[i];
-    i++;
-  }
+  numbers.forEach(item => {
+    sum += item;
+  });
   return sum / numbers.length;
 }
