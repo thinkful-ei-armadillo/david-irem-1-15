@@ -126,19 +126,11 @@ function hazardWarningCreator(typeOfWarning){
 
 function decoder(string) {
   const arr = string.split(' ');
-  console.log(arr);
-  let finalWord;
-  let output = arr.reduce(function(decodedWord,currentEntry, 0){
-    if(1 === 1){
-      console.log(`we are at ${currentEntry}`);
-      finalWord += ' ';
+  return arr.reduce(function(acc,curr){
+    if(curr.length === 3){
+      return acc + ' ';
+    } else {
+      return acc + curr[curr.length-1].toUpperCase();
     }
-    else {
-      finalWord += currentEntry[currentEntry.length-1].toUpperCase();
-      console.log(finalWord);
-    }
-  });
-  return output;
+  }, '');
 }
-
-decoder('nog oreo');
