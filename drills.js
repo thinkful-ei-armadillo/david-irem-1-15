@@ -94,10 +94,10 @@ const filteredNames = filter(myNames, function(name) {
   return name[0] === 'R';
 });
 
-console.log(filteredNames); // => ['Rich', 'Ray']
+// console.log(filteredNames); // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
 
-console.log(filter (myNames, name => name[0] === 'R'));
+// console.log(filter (myNames, name => name[0] === 'R'));
 
 function hazardWarningCreator(typeOfWarning){
   let warningCounter = 0;
@@ -126,17 +126,19 @@ function hazardWarningCreator(typeOfWarning){
 
 function decoder(string) {
   const arr = string.split(' ');
-  let output=' ';
-  arr.reduce(function(output,item){
-    if(item.length === 3){
-      output += ' ';
+  console.log(arr);
+  let finalWord;
+  let output = arr.reduce(function(decodedWord,currentEntry, 0){
+    if(1 === 1){
+      console.log(`we are at ${currentEntry}`);
+      finalWord += ' ';
     }
     else {
-      output += item[item.length-1].toUpperCase;
+      finalWord += currentEntry[currentEntry.length-1].toUpperCase();
+      console.log(finalWord);
     }
   });
-  console.log(output);
   return output;
 }
 
-decoder('noggin oreo');
+decoder('nog oreo');
