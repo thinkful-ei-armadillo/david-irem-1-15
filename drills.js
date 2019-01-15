@@ -94,7 +94,7 @@ const filteredNames = filter(myNames, function(name) {
   return name[0] === 'R';
 });
 
-console.log(filteredNames) // => ['Rich', 'Ray']
+console.log(filteredNames); // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
 
 console.log(filter (myNames, name => name[0] === 'R'));
@@ -105,13 +105,21 @@ function hazardWarningCreator(typeOfWarning){
     warningCounter ++;
     console.log(`Danger there is a ${typeOfWarning} hazard at ${location}`);
     console.log(`${typeOfWarning} has triggered ${warningCounter} times.`);
-  }
+  };
 }
 
-const rocks = hazardWarningCreator('rocks on the road');
-const rain = hazardWarningCreator('splashin the road');
-const fire = hazardWarningCreator('burn in hell unless you run away now');
+// const rocks = hazardWarningCreator('rocks on the road');
+// const rain = hazardWarningCreator('splashin the road');
+// const fire = hazardWarningCreator('burn in hell unless you run away now');
 
-rocks('mainstreet');
-rocks('mainstreet');
-rain('mainstreet');
+// rocks('mainstreet');
+// rocks('mainstreet');
+// rain('mainstreet');
+
+
+const turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+const forwardMovement = turtleMovements.filter(arr => arr[0] >= 0 && arr[1] >= 0);
+const mappedMovements = turtleMovements.map(arr => Math.abs(arr[0]) + Math.abs(arr[1]));
+turtleMovements.forEach(arr => console.log(Math.abs(arr[0]) + Math.abs(arr[1])));
+console.log(forwardMovement);
+console.log(mappedMovements);
