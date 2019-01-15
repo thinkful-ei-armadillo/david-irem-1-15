@@ -49,3 +49,13 @@ function min(numbers){
     return currentMin;
   }
 }
+
+function average(numbers){
+  let i =0;
+  let sum = 0;
+  while (i < numbers.length){
+    sum += numbers[i];
+    i++;
+  }
+  return sum / numbers.length;
+}
