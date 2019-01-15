@@ -71,4 +71,4 @@ function hello(){
 function goodBye(){
   console.log('GoodBye World!');
 }
-console.log(repeat(goodBye,3));
+repeat(goodBye,3);
