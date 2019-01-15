@@ -57,3 +57,18 @@ function average(numbers){
   });
   return sum / numbers.length;
 }
+
+function repeat(fn, n){
+  for (let i=0; i<n; i++){
+    fn();
+  }
+}
+
+function hello(){
+  console.log('Hello World!');
+}
+
+function goodBye(){
+  console.log('GoodBye World!');
+}
+console.log(repeat(goodBye,3));
